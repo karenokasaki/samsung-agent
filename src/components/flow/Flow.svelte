@@ -21,19 +21,18 @@
 	onMount(() => {
 		sliderRef = document.querySelector('.slider');
 	});
-
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="flex flex-col mx-auto mt-20 w-[905px] min-h-[550px] mb-40 font-samsung-one"
+	class="flex flex-col mx-auto my-6 w-[905px] min-h-[930px] font-samsung-one"
 	on:click={onWindowClick}
 >
-	<div class="border border-gray-300 relative overflow-hidden">
+	<div class="border border-gray-300 relative overflow-hidden min-h-[930px]">
 		<Header />
 		<Breadcrumb bind:openHistory {toggleHistory} />
-		<div class="slider h-full" data-openHistory={openHistory} bind:this={sliderRef}>
+		<div class="slider h-[777px]" data-openHistory={openHistory} bind:this={sliderRef}>
 			<History />
 		</div>
 		<Interactive />

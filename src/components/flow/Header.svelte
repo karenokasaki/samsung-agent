@@ -29,11 +29,11 @@
 	<div class="flex flex-col gap-[7px] justify-center">
 		<h3 class="text-center font-samsung-sharp-sans text-xl leading-none">{$tree.name}</h3>
 		<p class="text-samsung-sharp-regular text-sm text-grayscale-tertiary leading-none">
-			Your reference is: <span class="font-bold">555-5555</span>
+			Your reference is: <span class="font-bold">832-123/05</span>
 		</p>
 	</div>
 	<!-- Thumbnail -->
-	<div class="w-[100px] flex justify-center items-center">
-		<img src={$tree.productThumb} alt="" class="object-contain w-1/2" />
+	<div class="w-[140px] flex justify-center items-center px-5">
+		<img src={$tree.productThumb} alt="" class="object-contain w-100 rounded" />
 	</div>
 </div>

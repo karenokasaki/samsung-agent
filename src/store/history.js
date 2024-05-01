@@ -5,7 +5,7 @@ const mockActiveNode = {
 	type: '',
 	name: 'n2',
 	text: 'Subnecto crustulum aeternus. Tabernus utrum turpis alter terra defluo casus adhaero sint. Votum certe color mollitia causa quasi aggredior adhuc. Volo verbera aggero tantum certus auctor veritas et utor voluptas. Vulgo cimentarius animus tergum cum caute.',
-	question: 'Aeternus ab cattus caritas?',
+	question: 'It`s turning on?',
 	resolution: '',
 	choices: [],
 	tree: '4345dfae-c024-42dc-9b89-94672c30d77a',
@@ -13,20 +13,10 @@ const mockActiveNode = {
 };
 
 const mockHistory = {
-	'Jan 2, 2024': [
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() }
-	],
-	'Jan 3, 2024': [
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() }
-	],
-	'Jan 4, 2024': [
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() },
-		{ data: { node: mockActiveNode, answer: 'Answer text.' }, timestamp: new Date() }
+	'Apr 29, 2024': [
+		{ data: { node: mockActiveNode, answer: 'Yes.' }, timestamp: new Date() },
+		{ data: { node: mockActiveNode, answer: 'No.' }, timestamp: new Date() },
+		{ data: { node: mockActiveNode, answer: 'Sometimes.' }, timestamp: new Date() }
 	]
 };
 

@@ -34,11 +34,11 @@
 			}}
 		>
 			<p
-				class="text-grayscale-tertiary text-[9px] whitespace-nowrap flex flex-col align-middle justify-center overflow-hidden overflow-ellipsis"
+				class="text-grayscale-tertiary text-[10px] whitespace-nowrap flex flex-col align-middle justify-center overflow-hidden overflow-ellipsis"
 			>
 				{data.node.question}
 				{#if !data.node.choices.length}
-					<span class="text-grayscale-quaternary text-[8px] font-normal">
+					<span class="text-grayscale-quaternary text-[10px] font-normal">
 						{data.answer}
 					</span>
 				{/if}
