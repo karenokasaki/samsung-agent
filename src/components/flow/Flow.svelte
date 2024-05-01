@@ -13,20 +13,24 @@
 	}
 
 	function onWindowClick(e) {
-		if(!sliderRef.contains(e.target) && e.target.id !== 'history-button') {
-			openHistory = false
+		if (!sliderRef.contains(e.target) && e.target.id !== 'history-button') {
+			openHistory = false;
 		}
 	}
 
 	onMount(() => {
-		sliderRef= document.querySelector('.slider');
+		sliderRef = document.querySelector('.slider');
 	});
-
 
 </script>
 
-<div class="flex flex-col mx-auto mt-20 w-[905px] min-h-[550px] mb-40 font-samsung-one" on:click={onWindowClick}>
-	<div class="border border-gray-300 relative overflow-hidden" >
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div
+	class="flex flex-col mx-auto mt-20 w-[905px] min-h-[550px] mb-40 font-samsung-one"
+	on:click={onWindowClick}
+>
+	<div class="border border-gray-300 relative overflow-hidden">
 		<Header />
 		<Breadcrumb bind:openHistory {toggleHistory} />
 		<div class="slider h-full" data-openHistory={openHistory} bind:this={sliderRef}>

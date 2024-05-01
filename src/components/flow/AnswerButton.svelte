@@ -11,6 +11,7 @@
 	on:click={() => {
 		setActiveNode(choice.to);
 		addStep({ node: $activeNode, answer: choice.text_button });
+		console.log({ node: $activeNode, answer: choice.text_button });
 	}}
 >
 	<div class="p-[14px] border-r-2 border-grayscale-quinary">

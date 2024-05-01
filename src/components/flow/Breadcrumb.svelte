@@ -6,6 +6,8 @@
 	import { setActiveNode } from '../../store/flow';
 	import { tree } from '../../store/flow';
 	export let toggleHistory = () => {};
+
+	$: console.log('breadcrumbs', $breadcrumb.head);
 </script>
 
 <div class="bg-grayscale-secondary w-full h-8 flex flex-row gap-2 pl-4 overflow-hidden relative">
@@ -35,6 +37,11 @@
 				class="text-grayscale-tertiary text-[9px] whitespace-nowrap flex flex-col align-middle justify-center overflow-hidden overflow-ellipsis"
 			>
 				{data.node.question}
+				{#if !data.node.choices.length}
+					<span class="text-grayscale-quaternary text-[8px] font-normal">
+						{data.answer}
+					</span>
+				{/if}
 			</p>
 		</button>
 		{#if idx < $breadcrumb.size - 1}
