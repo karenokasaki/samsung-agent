@@ -1,0 +1,122 @@
+{
+	"tree": {
+		"name": "new tree",
+		"description": "",
+		"published": false,
+		"folder": "New Folder",
+		"id": "4345dfae-c024-42dc-9b89-94672c30d77a",
+		"rootNode": "d03a35a9-84ab-44a1-a34a-05b7ff0f017d",
+		"productThumb": "/images/dishwasher.png"
+	},
+	"nodes": {
+		"d03a35a9-84ab-44a1-a34a-05b7ff0f017d": {
+			"name": "Root Node.",
+			"question": "Eaque pecus cupressus suus?",
+			"text": "Aliquid cedo armarium substantia teneo aegre virga aggredior tantillus constans. Ex vulgaris amicitia timor teres animadverto virga cornu omnis. Aperiam constans credo cenaculum. Vitiosus error vito acerbitas adipiscor vero turba cribro. Thesis absum tempore subseco agnitio ubi excepturi commodi bis.",
+			"choices": [
+				{ "to": "121b84f7-a8c7-4fa7-8aa5-873ccbe01ac2", "text_button": "Conscendo." },
+				{ "to": "d425742e-8abf-4c1a-8ff9-631e6b9af812", "text_button": "Trepide." },
+				{ "to": "6d01ad7d-144c-4a31-bea3-09343a4c5a69", "text_button": "Cohibeo." },
+				{ "to": "68f457c0-a9c2-4d93-853b-b65b81b7bfae", "text_button": "Amplitudo." },
+				{ "to": "714be107-25e5-447a-8f10-39c3b1f6705d", "text_button": "Vero." }
+			],
+			"id": "d03a35a9-84ab-44a1-a34a-05b7ff0f017d",
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a"
+		},
+		"121b84f7-a8c7-4fa7-8aa5-873ccbe01ac2": {
+			"type": "",
+			"name": "n1",
+			"text": "Advoco vis agnitio denique comparo officia. Porro arbitro decipio molestiae tibi adsum. Undique tero utrum coepi paens nihil accusamus. Voro tardus utique brevis sub illo deleo amicitia adipisci collum. Cui dedecor turpis validus acceptus comprehendo universe advoco numquam.",
+			"question": "Dolorem anser victoria creptio?",
+			"resolution": "",
+			"choices": [
+				{ "to": "dcf5fcac-b7f8-4370-ac9b-84c0c6471093", "text_button": "Thymum." },
+				{ "to": "74befdb8-50b2-4560-a0e9-03c99cdcd74f", "text_button": "Nihil." },
+				{ "to": "9f75099a-70e4-4631-a26a-0ad5a2f42e10", "text_button": "Soleo." },
+				{ "to": "87672644-0407-4106-8f1b-0a72310dcf51", "text_button": "Totus." }
+			],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "121b84f7-a8c7-4fa7-8aa5-873ccbe01ac2"
+		},
+		"d425742e-8abf-4c1a-8ff9-631e6b9af812": {
+			"type": "",
+			"name": "n2",
+			"text": "Subnecto crustulum aeternus. Tabernus utrum turpis alter terra defluo casus adhaero sint. Votum certe color mollitia causa quasi aggredior adhuc. Volo verbera aggero tantum certus auctor veritas et utor voluptas. Vulgo cimentarius animus tergum cum caute.",
+			"question": "Aeternus ab cattus caritas?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "d425742e-8abf-4c1a-8ff9-631e6b9af812"
+		},
+		"6d01ad7d-144c-4a31-bea3-09343a4c5a69": {
+			"type": "",
+			"name": "n3",
+			"text": "Arbustum decretum tenetur admoneo volutabrum coniuratio tripudio autus. Totam vindico aggredior traho creptio volubilis. Abduco corpus occaecati delinquo creta defetiscor claudeo callide. Ambulo cauda sunt decerno demonstro ceno verbera adsidue. Aggredior copia quam complectus comes amiculum viduo tricesimus vinculum.",
+			"question": "Demulceo comis vorago conscendo?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "6d01ad7d-144c-4a31-bea3-09343a4c5a69"
+		},
+		"68f457c0-a9c2-4d93-853b-b65b81b7bfae": {
+			"type": "",
+			"name": "n4",
+			"text": "Vinculum aperio ventosus tergum. Victoria delego cunae tergo ustilo amplitudo bibo. Peccatus aestivus conforto cribro ad synagoga ante. Catena annus crepusculum ratione derideo ars suppellex vero cunae. Deduco aperio concedo accendo apud deprimo amicitia alioqui.",
+			"question": "Quas artificiose illo textilis?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "68f457c0-a9c2-4d93-853b-b65b81b7bfae"
+		},
+		"714be107-25e5-447a-8f10-39c3b1f6705d": {
+			"type": "",
+			"name": "5n",
+			"text": "Strenuus odio vulpes. Summisse cultura bonus viscus colo celebrer callide laboriosam. Tener adhaero aspernatur stultus confero. Conservo quisquam amplitudo urbs commodi ex. Dolores thesaurus xiphias laborum quibusdam ea aestus vitium.",
+			"question": "Corrumpo ultra summisse vestrum?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "714be107-25e5-447a-8f10-39c3b1f6705d"
+		},
+		"dcf5fcac-b7f8-4370-ac9b-84c0c6471093": {
+			"type": "",
+			"name": "b1",
+			"text": "Aperte thermae occaecati vel vix denuncio vulariter. Callide video vorago barba beatae sordeo. Demoror confugo esse utor vis cogito blandior spectaculum tremo subseco. Universe caput tondeo aduro. Deserunt suadeo vulnus truculenter occaecati bos velit.",
+			"question": "Solutio cura patria vereor?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "dcf5fcac-b7f8-4370-ac9b-84c0c6471093"
+		},
+		"74befdb8-50b2-4560-a0e9-03c99cdcd74f": {
+			"type": "",
+			"name": "b2",
+			"text": "Acies vulgivagus temperantia cuius trucido arto. Occaecati inventore similique thymbra admoveo totam totam crinis cauda. Bellum conspergo clarus aro adnuo sollicito. Abbas tamdiu circumvenio comis vilitas maiores tribuo hic. Careo correptius adulescens dedico volubilis tener demitto inflammatio ad accedo.",
+			"question": "Comparo thermae adstringo canonicus?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "74befdb8-50b2-4560-a0e9-03c99cdcd74f"
+		},
+		"9f75099a-70e4-4631-a26a-0ad5a2f42e10": {
+			"type": "",
+			"name": "b3",
+			"text": "Tamquam vitiosus calamitas adflicto tot accusantium. Vinum venia apto arcesso aestivus. Debilito unde thorax baiulus unde ubi caelum valde venustas deputo. Tego admoneo coadunatio degusto cito addo caries utique. Sol tabgo tersus autus deorsum.",
+			"question": "Adflicto tertius molestiae amplitudo?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "9f75099a-70e4-4631-a26a-0ad5a2f42e10"
+		},
+		"87672644-0407-4106-8f1b-0a72310dcf51": {
+			"type": "",
+			"name": "b4",
+			"text": "Vester cupio tabernus adduco ullam allatus articulus turpis. Dolore suppono confero sopor curiositas. Carmen aro enim creo velum quidem. Viridis baiulus reiciendis conqueror ademptio aurum. Demens itaque curriculum crur debeo utrum ait.",
+			"question": "Suppellex baiulus esse officia?",
+			"resolution": "",
+			"choices": [],
+			"tree": "4345dfae-c024-42dc-9b89-94672c30d77a",
+			"id": "87672644-0407-4106-8f1b-0a72310dcf51"
+		}
+	}
+}

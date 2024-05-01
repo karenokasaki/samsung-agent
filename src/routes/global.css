@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'SamsungOne';
+  src: url('/fonts/SamsungOne-400.woff2') format('woff2');
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: 'SamsungSharpSans-Bold';
+  src: url('/fonts/SamsungSharpSans-Bold.woff') format('woff');
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+body {
+  font-family: 'SamsungOne', sans-serif; /* Set 'SamsungOne' as the default font for the body */
+}
+
+strong, b, bold {
+  font-family: 'SamsungSharpSans-Bold', 'SamsungOne', sans-serif; /* Use 'SamsungSharpSans-Bold' for strong, b, and bold elements */
+}
+
+li {
+  text-align: left;
+}

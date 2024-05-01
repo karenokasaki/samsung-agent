@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'SamsungSharpSans';
+		font-weight: 700;
+		src: url('/fonts/SamsungSharpSans-Bold.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: 'SamsungOne';
+		font-weight: 400;
+		src: url('/fonts/SamsungOneLatinWeb-400.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'SamsungOne';
+		font-weight: 700;
+		src: url('/fonts/SamsungOneLatinWeb-700.woff2') format('woff2');
+	}
+}

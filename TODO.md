@@ -1,0 +1,2 @@
+- [ ] change history store to correctly display order
+- [ ] back button in header returns to prev page

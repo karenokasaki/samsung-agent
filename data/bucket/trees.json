@@ -1,0 +1,19 @@
+[
+	{
+		"name": "Apps are draining battery on Galaxy phone or tablet",
+		"description": "",
+		"folder": null,
+		"id": "737ae380-bfac-4742-9a81-b7e677b4d94d",
+		"createdAt": "2024-04-30T21:32:06.527Z",
+		"updatedAt": "2024-04-30T22:36:21.638Z",
+		"nodeCount": 11,
+		"nextLocalId": 12,
+		"published": false,
+		"comments": [],
+		"models": [],
+		"data": {
+			"models": ["SAMSUNG OLED TV", "SAMSUNG UHD TV", "SAMSUNG QLED TV", "SAMSUNG FRAME TV"]
+		},
+		"rootNode": "014ed8c2-80d8-4afb-8552-ba926830d523"
+	}
+]
