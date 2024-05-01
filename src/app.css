@@ -20,4 +20,15 @@
 		font-weight: 700;
 		src: url('/fonts/SamsungOneLatinWeb-700.woff2') format('woff2');
 	}
+
+	ol {
+		list-style: revert;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	li {
+		margin-left: 10px;
+		font-size: 16px;
+	}
 }

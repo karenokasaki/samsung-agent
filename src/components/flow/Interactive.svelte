@@ -6,7 +6,7 @@
 {#if $activeNode}
 	<div class=" py-10 flex flex-col align-middle items-center justify-center">
 		<div class="max-w-[500px] flex flex-col gap-8 items-center justify-center">
-			<p class="text-base w-fit flex flex-col items-center gap-2 test">
+			<p class="text-base w-fit flex flex-col items-start gap-2 content">
 				{@html $activeNode.text}
 			</p>
 			<p class="font-samsung-sharp-sans text-lg font-bold text-center w-full">
