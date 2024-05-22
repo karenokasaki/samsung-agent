@@ -6,8 +6,6 @@
 	import { setActiveNode } from '../../store/flow';
 	import { tree } from '../../store/flow';
 	export let toggleHistory = () => {};
-
-	$: console.log('breadcrumbs', $breadcrumb.head);
 </script>
 
 <div class="bg-grayscale-secondary w-full h-8 flex flex-row gap-2 pl-4 overflow-hidden relative">

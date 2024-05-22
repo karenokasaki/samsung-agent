@@ -4,9 +4,12 @@
 	import Interactive from './Interactive.svelte';
 	import History from '../../components/history/History.svelte';
 	import { onMount } from 'svelte';
+	import { tree, modelChoosen } from '../../store/flow';
+	import { breadcrumb } from '../../store/history';
 
 	let openHistory = false;
 	let sliderRef;
+	let hasModel = false;
 
 	function toggleHistory() {
 		openHistory = !openHistory;
@@ -21,6 +24,8 @@
 	onMount(() => {
 		sliderRef = document.querySelector('.slider');
 	});
+
+	$: $tree?.models?.length > 0 && (hasModel = true);
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -36,6 +41,15 @@
 			<History />
 		</div>
 		<Interactive />
+	</div>
+	<div class="w-full flex items-center justify-end footer">
+		{#if hasModel && $tree?.models?.length > 0}
+			<select disabled={$breadcrumb.size > 0} bind:value={$modelChoosen}>
+				{#each $tree?.models as model}
+					<option value={model}>{model}</option>
+				{/each}
+			</select>
+		{/if}
 	</div>
 </div>
 

@@ -27,7 +27,7 @@
 
 	<!-- Text -->
 	<div class="flex flex-col gap-[7px] justify-center">
-		<h3 class="text-center font-samsung-sharp-sans text-xl leading-none">{$tree.name}</h3>
+		<h3 class="text-center npm text-xl leading-none">{$tree.name}</h3>
 		<p class="text-samsung-sharp-regular text-sm text-grayscale-tertiary leading-none">
 			Your reference is: <span class="font-bold">832-123/05</span>
 		</p>

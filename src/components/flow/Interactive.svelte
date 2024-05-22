@@ -1,6 +1,27 @@
 <script>
-	import { activeNode } from '../../store/flow';
+	import {
+		TREE_TYPES,
+		activeNode,
+		modelChoosen,
+		setActiveNode,
+		treeTypeInfo
+	} from '../../store/flow';
 	import AnswerButton from './AnswerButton.svelte';
+
+	$: console.log($activeNode);
+
+	$: {
+		if ($activeNode?.type === TREE_TYPES.TREE) {
+			treeTypeInfo.set($activeNode.data);
+			setActiveNode($activeNode.data.targetNodeId);
+		}
+		if ($activeNode?.type === TREE_TYPES.CONDITIONAL) {
+			const nextNodeId = $activeNode.choices.find(
+				(choice) => choice.targetModel === $modelChoosen
+			).to;
+			setActiveNode(nextNodeId);
+		}
+	}
 </script>
 
 {#if $activeNode}
