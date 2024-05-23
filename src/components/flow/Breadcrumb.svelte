@@ -6,6 +6,13 @@
 	import { setActiveNode } from '../../store/flow';
 	import { tree } from '../../store/flow';
 	export let toggleHistory = () => {};
+
+	function truncateString(str, num = 10) {
+		if (str.length <= num) {
+			return str;
+		}
+		return str.slice(0, num) + '...';
+	}
 </script>
 
 <div class="bg-grayscale-secondary w-full h-8 flex flex-row gap-2 pl-4 overflow-hidden relative">
@@ -34,12 +41,15 @@
 			<p
 				class="text-grayscale-tertiary text-[10px] whitespace-nowrap flex flex-col align-middle justify-center overflow-hidden overflow-ellipsis"
 			>
-				{data.node.question}
-				{#if !data.node.choices.length}
-					<span class="text-grayscale-quaternary text-[10px] font-normal">
-						{data.answer}
-					</span>
-				{/if}
+				<span class="text-grayscale-quaternary text-[10px] font-normal">
+					{#if !data.node.choices.length}
+						{truncateString(data.answer)}
+					{/if}
+
+					{#if data.node.choices.length > 0}
+						{truncateString(data.node.name)}
+					{/if}
+				</span>
 			</p>
 		</button>
 		{#if idx < $breadcrumb.size - 1}

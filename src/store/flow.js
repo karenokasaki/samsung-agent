@@ -11,21 +11,24 @@ export const tree = writable({});
 export const nodes = writable({});
 export const activeNode = writable(null);
 export const modelChoosen = writable(MODEL_GENERIC);
-export const treeTypeInfo = writable({});
+export const treeNodeInfo = writable({});
 
 export async function revalidateTree(treeID) {
 	if (import.meta.env.VITE_ENVIRONMENT === 'development') {
-		const res = await fetch(`/api/bucket/${treeID}.json`);
-		if (!res.ok) {
+		try {
+			const res = await fetch(`/api/bucket/${treeID}.json`);
+			if (!res.ok) {
+				throw new Error('Tree not found in local data');
+			}
+			const { data } = await res.json();
+			if ('tree' in data && 'nodes' in data) {
+				tree.set(data.tree);
+				nodes.set(data.nodes);
+				activeNode.set(data.nodes[data.tree.rootNode]);
+			}
+		} catch (error) {
 			getPublishedTree(treeID);
 			return;
-		}
-
-		const { data } = await res.json();
-		if ('tree' in data && 'nodes' in data) {
-			tree.set(data.tree);
-			nodes.set(data.nodes);
-			activeNode.set(data.nodes[data.tree.rootNode]);
 		}
 	}
 }
@@ -49,19 +52,22 @@ export async function getTreeJson(treeID) {
 
 /* get tree from backend */
 export async function getPublishedTree(idTree) {
-	//url example: /api/trees/d2aac77b-38c6-4a9d-8ab7-b982071950ab/publish/test_user@gmail.com
+	try {
+		const res = await fetch(
+			`${import.meta.env.VITE_LOCALHOST}/api/trees/${idTree}/publish/${import.meta.env.VITE_USER}`
+		);
+		const { data } = await res.json();
+		if (!data) throw new Error('Unable to get published tree, check id and url.');
+		const ParsedData = JSON.parse(data);
+		if (ParsedData.error) throw new Error(ParsedData.error);
 
-	const res = await fetch(
-		`${import.meta.env.VITE_LOCALHOST}/api/trees/${idTree}/publish/${import.meta.env.VITE_USER}`
-	);
-	const { data } = await res.json();
-	if (!data) throw new Error('Unable to get published tree, check id and url.');
-	const ParsedData = JSON.parse(data);
-	if (ParsedData.error) throw new Error(ParsedData.error);
-
-	if ('tree' in ParsedData && 'nodes' in ParsedData) {
-		tree.set(ParsedData.tree);
-		nodes.set(ParsedData.nodes);
-		activeNode.set(ParsedData.nodes[ParsedData.tree.rootNode]);
+		if ('tree' in ParsedData && 'nodes' in ParsedData) {
+			tree.set(ParsedData.tree);
+			nodes.set(ParsedData.nodes);
+			activeNode.set(ParsedData.nodes[ParsedData.tree.rootNode]);
+		}
+	} catch (error) {
+		console.error(error);
+		return;
 	}
 }
