@@ -4,7 +4,7 @@
 		activeNode,
 		modelChoosen,
 		setActiveNode,
-		treeTypeInfo
+		treeNodeInfo
 	} from '../../store/flow';
 	import AnswerButton from './AnswerButton.svelte';
 
@@ -12,7 +12,7 @@
 
 	$: {
 		if ($activeNode?.type === TREE_TYPES.TREE) {
-			treeTypeInfo.set($activeNode.data);
+			treeNodeInfo.set($activeNode.data);
 			setActiveNode($activeNode.data.targetNodeId);
 		}
 		if ($activeNode?.type === TREE_TYPES.CONDITIONAL) {
@@ -40,6 +40,13 @@
 					<AnswerButton {choice} />
 				{/each}
 			</div>
+
+			<!-- back to original tree when no more choices -->
+			{#if $treeNodeInfo?.returnNodeId && $activeNode?.choices.length === 0 && $activeNode?.resolution}
+				<div>
+					<AnswerButton choice={{ to: $treeNodeInfo.returnNodeId, text_button: 'Next' }} />
+				</div>
+			{/if}
 		</div>
 	</div>
 {/if}
