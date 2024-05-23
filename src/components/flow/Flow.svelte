@@ -4,7 +4,7 @@
 	import Interactive from './Interactive.svelte';
 	import History from '../../components/history/History.svelte';
 	import { onMount } from 'svelte';
-	import { tree, modelChoosen } from '../../store/flow';
+	import { tree, modelChoosen, MODEL_GENERIC } from '../../store/flow';
 	import { breadcrumb } from '../../store/history';
 
 	let openHistory = false;
@@ -26,6 +26,8 @@
 	});
 
 	$: $tree?.models?.length > 0 && (hasModel = true);
+
+	$: console.log($modelChoosen);
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -42,15 +44,26 @@
 		</div>
 		<Interactive />
 	</div>
-	<div class="w-full flex items-center justify-end footer">
-		{#if hasModel && $tree?.models?.length > 0}
-			<select disabled={$breadcrumb.size > 0} bind:value={$modelChoosen}>
+	{#if hasModel && $tree?.models?.length > 0}
+		<div class="w-full flex flex-col items-end justify-end footer mt-5">
+			<p
+				class="text-sm font-semibold text-gray-500 font-samsung-one hover:text-gray-700 transition duration-150 ease-in-out"
+			>
+				Choose a model
+			</p>
+
+			<select
+				disabled={$breadcrumb.size > 0}
+				bind:value={$modelChoosen}
+				class="border border-gray-300 rounded-md w-[30%] px-2 py-2 bg-white text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
+			>
+				<option value={MODEL_GENERIC}>Generic</option>
 				{#each $tree?.models as model}
 					<option value={model}>{model}</option>
 				{/each}
 			</select>
-		{/if}
-	</div>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -73,5 +86,10 @@
 	::-webkit-scrollbar-thumb {
 		background-color: #bbbbbb; /* Cor de fundo do polegar */
 		border-radius: 6px; /* Raio da borda do polegar */
+	}
+
+	select:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
 	}
 </style>
