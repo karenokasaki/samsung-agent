@@ -1,0 +1,123 @@
+{
+	"nodes": {
+		"ea155c7d-0e38-4df9-ad77-a1e6e88e86e1": {
+			"createdAt": "2024-05-21T20:55:13.727Z",
+			"question": "",
+			"name": "",
+			"tree": "469e4bca-3b33-4576-8845-f61242460cd8",
+			"text": "",
+			"id": "ea155c7d-0e38-4df9-ad77-a1e6e88e86e1",
+			"choices": [],
+			"type": "tree",
+			"resolution": "",
+			"localId": 2,
+			"data": {
+				"targetTreeId": "7f1a02e6-31ac-460a-92b5-5b9756590704",
+				"returnNodeId": "9b068b47-1bbd-45e6-afd9-fd836c73ad50",
+				"targetNodeId": "b498e6c8-9559-405b-b71d-d74193acf307"
+			},
+			"updatedAt": "2024-05-21T20:55:21.808Z"
+		},
+		"fbdc76af-5c9a-4d3c-b3d5-981214b58649": {
+			"createdAt": "2024-05-21T20:58:26.658Z",
+			"question": "",
+			"data": {},
+			"name": "",
+			"tree": "7f1a02e6-31ac-460a-92b5-5b9756590704",
+			"text": "",
+			"id": "fbdc76af-5c9a-4d3c-b3d5-981214b58649",
+			"choices": [],
+			"type": "normal",
+			"resolution": "",
+			"localId": 8,
+			"updatedAt": "2024-05-21T20:58:26.658Z"
+		},
+		"b498e6c8-9559-405b-b71d-d74193acf307": {
+			"createdAt": "2024-05-21T20:54:51.221Z",
+			"question": "node de outra arvore",
+			"name": "Root node",
+			"tree": "7f1a02e6-31ac-460a-92b5-5b9756590704",
+			"text": "",
+			"id": "b498e6c8-9559-405b-b71d-d74193acf307",
+			"type": "normal",
+			"localId": 1,
+			"choices": [
+				{
+					"to": "516cb89b-215a-42b3-b750-b4327dfe7fb3",
+					"text_button": "opção da arvore externa. continua na arvore 2"
+				}
+			],
+			"updatedAt": "2024-05-21T20:56:35.059Z"
+		},
+		"516cb89b-215a-42b3-b750-b4327dfe7fb3": {
+			"createdAt": "2024-05-21T20:56:35.043Z",
+			"question": "",
+			"data": {},
+			"name": "",
+			"tree": "7f1a02e6-31ac-460a-92b5-5b9756590704",
+			"text": "",
+			"id": "516cb89b-215a-42b3-b750-b4327dfe7fb3",
+			"type": "conditional",
+			"resolution": "",
+			"localId": 6,
+			"choices": [
+				{
+					"targetModel": "generic",
+					"to": "140fb7a9-d84b-4f04-a45e-b25df9e239be"
+				}
+			],
+			"updatedAt": "2024-05-21T20:58:26.713Z"
+		},
+		"140fb7a9-d84b-4f04-a45e-b25df9e239be": {
+			"createdAt": "2024-05-21T20:58:24.242Z",
+			"question": "",
+			"data": {},
+			"tree": "7f1a02e6-31ac-460a-92b5-5b9756590704",
+			"text": "normal node",
+			"id": "140fb7a9-d84b-4f04-a45e-b25df9e239be",
+			"choices": [],
+			"type": "normal",
+			"resolution": "",
+			"localId": 7,
+			"name": "Included in external",
+			"updatedAt": "2024-05-22T10:53:01.719Z"
+		},
+		"9b068b47-1bbd-45e6-afd9-fd836c73ad50": {
+			"createdAt": "2024-05-21T19:11:52.064Z",
+			"question": "",
+			"name": "Root node",
+			"tree": "469e4bca-3b33-4576-8845-f61242460cd8",
+			"text": "",
+			"id": "9b068b47-1bbd-45e6-afd9-fd836c73ad50",
+			"type": "normal",
+			"localId": 1,
+			"choices": [
+				{
+					"to": "ea155c7d-0e38-4df9-ad77-a1e6e88e86e1",
+					"text_button": "primeira pergunta 1"
+				}
+			],
+			"updatedAt": "2024-05-21T20:55:13.745Z"
+		}
+	},
+	"tree": {
+		"createdAt": "2024-05-21T19:11:52.064Z",
+		"models": [
+			"GENERIC",
+			"SAMSUNG OLED TV",
+			"SAMSUNG UHD TV",
+			"SAMSUNG QLED TV",
+			"SAMSUNG FRAME TV"
+		],
+		"comments": [],
+		"data": {},
+		"name": "t1",
+		"description": "",
+		"id": "469e4bca-3b33-4576-8845-f61242460cd8",
+		"published": false,
+		"rootNode": "9b068b47-1bbd-45e6-afd9-fd836c73ad50",
+		"nodeCount": 2,
+		"nextLocalId": 3,
+		"updatedAt": "2024-05-21T20:55:21.815Z"
+	}
+}

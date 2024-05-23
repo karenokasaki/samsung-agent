@@ -5,8 +5,6 @@
 	import Item from './info/Item.svelte';
 	import { dateToReadableTimestamp } from '$lib/fomat';
 	import { tree } from '../../store/flow';
-
-	$: console.log('history', $history);
 </script>
 
 {#if $tree}

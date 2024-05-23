@@ -2,9 +2,13 @@
 	import ArrowLeftIcon from '../icons/ArrowLeft.svelte';
 	import { tree, setActiveNode } from '../../store/flow';
 	import { popBreadcrumb, breadcrumb } from '../../store/history';
+	import { goto } from '$app/navigation';
 
 	function backOne() {
-		if ($breadcrumb.size === 0) return;
+		if ($breadcrumb.size === 0) {
+			goto('/');
+			return;
+		}
 
 		if ($breadcrumb.size === 1) {
 			popBreadcrumb();
@@ -27,7 +31,7 @@
 
 	<!-- Text -->
 	<div class="flex flex-col gap-[7px] justify-center">
-		<h3 class="text-center font-samsung-sharp-sans text-xl leading-none">{$tree.name}</h3>
+		<h3 class="text-center npm text-xl leading-none">{$tree.name}</h3>
 		<p class="text-samsung-sharp-regular text-sm text-grayscale-tertiary leading-none">
 			Your reference is: <span class="font-bold">832-123/05</span>
 		</p>
