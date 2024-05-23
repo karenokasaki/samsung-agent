@@ -8,8 +8,6 @@
 	} from '../../store/flow';
 	import AnswerButton from './AnswerButton.svelte';
 
-	$: console.log($activeNode);
-
 	$: {
 		if ($activeNode?.type === TREE_TYPES.TREE) {
 			treeNodeInfo.set($activeNode.data);

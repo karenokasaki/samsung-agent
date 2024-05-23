@@ -39,17 +39,6 @@ export async function setActiveNode(nodeID) {
 	activeNode.set(nodesData[nodeID]);
 }
 
-/* get tree from json */
-export async function getTreeJson(treeID) {
-	const res = await fetch(`/api/bucket/${treeID}.json`);
-	const { data } = await res.json();
-	if ('tree' in data && 'nodes' in data) {
-		tree.set(data.tree);
-		nodes.set(data.nodes);
-		activeNode.set(data.nodes[data.tree.rootNode]);
-	}
-}
-
 /* get tree from backend */
 export async function getPublishedTree(idTree) {
 	try {
