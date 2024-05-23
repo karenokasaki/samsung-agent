@@ -2,9 +2,13 @@
 	import ArrowLeftIcon from '../icons/ArrowLeft.svelte';
 	import { tree, setActiveNode } from '../../store/flow';
 	import { popBreadcrumb, breadcrumb } from '../../store/history';
+	import { goto } from '$app/navigation';
 
 	function backOne() {
-		if ($breadcrumb.size === 0) return;
+		if ($breadcrumb.size === 0) {
+			goto('/');
+			return;
+		}
 
 		if ($breadcrumb.size === 1) {
 			popBreadcrumb();

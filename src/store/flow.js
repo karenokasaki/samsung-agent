@@ -16,6 +16,11 @@ export const treeTypeInfo = writable({});
 export async function revalidateTree(treeID) {
 	if (import.meta.env.VITE_ENVIRONMENT === 'development') {
 		const res = await fetch(`/api/bucket/${treeID}.json`);
+		if (!res.ok) {
+			getPublishedTree(treeID);
+			return;
+		}
+
 		const { data } = await res.json();
 		if ('tree' in data && 'nodes' in data) {
 			tree.set(data.tree);
@@ -23,8 +28,6 @@ export async function revalidateTree(treeID) {
 			activeNode.set(data.nodes[data.tree.rootNode]);
 		}
 	}
-
-	// if (import.meta.env.VITE_ENVIRONMENT === 'production') {}
 }
 
 export async function setActiveNode(nodeID) {
@@ -45,10 +48,17 @@ export async function getTreeJson(treeID) {
 }
 
 /* get tree from backend */
-export async function getPublishTree(url) {
-	const res = await fetch(`http://localhost:5173${url}`);
+export async function getPublishedTree(idTree) {
+	//url example: /api/trees/d2aac77b-38c6-4a9d-8ab7-b982071950ab/publish/test_user@gmail.com
+
+	const res = await fetch(
+		`${import.meta.env.VITE_LOCALHOST}/api/trees/${idTree}/publish/${import.meta.env.VITE_USER}`
+	);
 	const { data } = await res.json();
+	if (!data) throw new Error('Unable to get published tree, check id and url.');
 	const ParsedData = JSON.parse(data);
+	if (ParsedData.error) throw new Error(ParsedData.error);
+
 	if ('tree' in ParsedData && 'nodes' in ParsedData) {
 		tree.set(ParsedData.tree);
 		nodes.set(ParsedData.nodes);

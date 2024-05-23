@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="">
-				<h3 class="text-2xl font-semibold mb-4">Access a tree that was publish</h3>
+				<h3 class="text-2xl font-semibold mb-4">Access a tree that was published</h3>
 
 				<div class="flex flex-row gap-4">
 					<input
@@ -60,7 +60,7 @@
 					/>
 					<button
 						class="bg-grayscale-primary p-2 rounded-2xl text-left flex items-center outline outline-2 outline-transparent hover:outline-skyblue-primary transition-all"
-						on:click={handleNavigation}
+						on:click={() => handleNavigation(idTreePublish)}
 					>
 						<div class="p-[8px] border-t-2 border-grayscale-quinary rotate-90">
 							<Choice />
@@ -68,6 +68,7 @@
 						<div class="font-base font-normal leading-6 flex h-auto px-4">Load Tree</div></button
 					>
 				</div>
+				<small>for testing: d2aac77b-38c6-4a9d-8ab7-b982071950ab</small>
 			</div>
 		</div>
 	</div>
