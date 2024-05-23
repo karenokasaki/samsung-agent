@@ -16,7 +16,7 @@
 	];
 
 	function handleNavigation(idTree) {
-		goto(`/${idTree}`);
+		goto(`/tree/${idTree}`);
 	}
 </script>
 
